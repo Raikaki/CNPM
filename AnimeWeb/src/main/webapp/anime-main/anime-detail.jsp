@@ -75,15 +75,20 @@
             <div class="anime__details__content">
                 <div class="row">
                     <div class="col-lg-3">
+                        <c:url var="urlAvatarMovie"
+                               value="${movie.getFirstAvatar()}"/>
+                        <div class="product__item__pic set-bg"
+                             data-setbg="${urlAvatarMovie}" style="background-image: url(${urlAvatarMovie});">
 
-                        <div class="anime__details__pic set-bg"
-                             data-setbg="${urlAvatarMovie}">
-                            <%--							<div class="comment">--%>
-                            <%--								<i class="fa fa-comments"></i> ${viewFilm.listComment.size()}--%>
-                            <%--							</div>--%>
-                            <%--							<div class="view">--%>
-                            <%--								<i class="fa fa-eye"></i> ${viewFilm.view }--%>
-                            <%--							</div>--%>
+
+                            <%--                                        <div class="rate">--%>
+                            <%--                                                ${movie.getAvgScore()} <i class='fa fa-star'--%>
+                            <%--                                                                          style='color: #f3da35'></i>--%>
+                            <%--                                        </div>--%>
+                            <%--                                        <div class="comment">--%>
+                            <%--                                            <i class="fa fa-comments"></i> ${movie.listComment.size()}--%>
+                            <%--                                        </div>--%>
+
                         </div>
                     </div>
                     <div class="col-lg-9">
@@ -172,7 +177,7 @@
                                     <c:if test="${!movie.isFree()}">
                                         <a href="/anime-main/AddWishList?idMovie=${idMovie}">
                                             <button style="color: white" id="buyMovie">Mua
-                                                ngay ${movie.getRenderPrice()} đ
+                                                ngay ${movie.price} đ
                                             </button>
                                         </a>
                                     </c:if>
@@ -189,7 +194,7 @@
 
                                             <button class="add-to-wishlist" data-id="${movie.id}" style="color: white"
                                                     id="buyMovie">Mua
-                                                ngay ${movie.getRenderPrice()} đ
+                                                ngay ${movie.price} đ
                                             </button>
 
                                         </c:when>
