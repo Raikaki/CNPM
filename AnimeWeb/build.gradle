@@ -76,8 +76,8 @@ tasks.withType(JavaCompile) {
 apply plugin: 'org.hidetake.ssh'
 remotes {
     host {
-        host = '34.126.167.187'
-        user = 'hcdat862002'
+        host = '34.126.83.96'
+        user = 'g20130012'
         identity =file('C:/Users/Admin/.ssh/id_rsa')
     }
 }
@@ -104,7 +104,7 @@ task docker_upload_file_to_server {
         println 'begin docker_upload_file_to_server'
         ssh.run {
             session(remotes.host) {
-
+                remove '/usr/deploy/AnimeWeb.war'
 
                 put from: "${project.projectDir}/build/libs/AnimeWeb.war",
                         into: "/usr/deploy/AnimeWeb.war"
