@@ -32,7 +32,7 @@
 	<link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
 	<link rel="stylesheet" type="text/css" href="css/ds/style.css" />
 	<script src="https://kit.fontawesome.com/9847adceef.js"></script>
-	<script src="https://www.google.com/recaptcha/api.js?hl=vi"></script>
+
 
 </head>
 
